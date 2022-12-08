@@ -27,9 +27,10 @@ app.use(express.json());
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send(knex
-      .select()
-  .table('users').then(data => console.log(data)))
+//     res.send(knex
+//       .select()
+//   .table('users').then(data => console.log(data)))
+res.send('server is up and running')
 })
 
 // Sign In
