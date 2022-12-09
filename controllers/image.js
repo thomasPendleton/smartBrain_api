@@ -7,7 +7,7 @@ const stub = ClarifaiStub.grpc();
 // console.log(Clarifai);
 
 // const app = new Clarifai.App({
-//   apiKey: "deca23d8796b49889658378ab992aa74",
+//   apiKey: "",
 // })
 
 // HEADS UP! Sometimes the Clarifai Models can be down or not working as they are constantly getting updated.
@@ -31,7 +31,7 @@ const stub = ClarifaiStub.grpc();
 // __________________old clarifai_________________________________________
 
 const metadata = new grpc.Metadata();
-metadata.set("authorization", "Key deca23d8796b49889658378ab992aa74");
+metadata.set("authorization", API_CLARIFAI_KEY);
 
 const handleApiCall = (req, res) => { 
     stub.PostModelOutputs(
