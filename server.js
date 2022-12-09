@@ -10,11 +10,8 @@ const { getProfile } = require('./controllers/profile')
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      host : 'postgresql-clean-21778',
-      port : 5432,
-      user : 'postgres',
-      password : 'home',
-      database : 'smartbrain'
+      host : process.env.DATABASE_URL,
+      ssl: true,
     }
   });
 // port:  3306
