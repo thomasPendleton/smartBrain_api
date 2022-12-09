@@ -31,7 +31,7 @@ const stub = ClarifaiStub.grpc();
 // __________________old clarifai_________________________________________
 
 const metadata = new grpc.Metadata();
-metadata.set("authorization", API_CLARIFAI_KEY);
+metadata.set("authorization", process.env.API_CLARIFAI_KEY);
 
 const handleApiCall = (req, res) => { 
     stub.PostModelOutputs(
